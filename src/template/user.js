@@ -3,6 +3,7 @@ import linkIcon from '../svg/link.svg'
 import githubIcon from '../svg/github.svg'
 import runningIcon from '../svg/running.svg'
 import rssIcon from '../svg/rss.svg'
+import filmIcon from '../svg/film.svg'
 import twitterIcon from '../svg/twitter.svg'
 import telegramIcon from "../svg/telegram.svg"
 import $ from '../helper/query'
@@ -24,6 +25,10 @@ class User {
 
   get rss() {
     return `<a target="_blank" href="https://raw.githubusercontent.com/superleeyom/blog/master/feed.xml">${rssIcon}</a>`
+  }
+  
+  get film() {
+    return `<a target="_blank" href="https://letterboxd.com/hadwin/">${filmIcon}</a>`
   }
 
   get twitter() {
@@ -62,6 +67,7 @@ class User {
       container,
       running,
       twitter,
+      film,
       telegram,
       rss,
     } = this
@@ -78,6 +84,7 @@ class User {
         ${website}
         ${email}
         ${twitter}
+        ${film}
         ${telegram}
         ${rss}
       </div>
